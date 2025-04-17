@@ -1,0 +1,688 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+body{
+    /* background: linear-gradient(to right, #6a11cb, #2575fc); */
+    font-family:  "Poppins";
+    /* padding: 30px 76px; */
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(225, 225, 225), rgb(254, 215, 173));
+    
+    
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 30px 76px;
+   
+}
+
+
+/* LOGO ANIMATION */
+
+.logo span {
+    display: inline-block;
+    font-family: "Cinzel";
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.662);
+    list-style: none;
+    text-decoration: none;
+    animation: logo 1s ease infinite;
+    position: relative;
+  }
+  
+  .logo span:nth-child(1) { animation-delay: 0s; }
+  .logo span:nth-child(2) { animation-delay: 0.1s; }
+  .logo span:nth-child(3) { animation-delay: 0.2s; }
+  .logo span:nth-child(4) { animation-delay: 0.3s; }
+  .logo span:nth-child(5) { animation-delay: 0.4s; }
+  .logo span:nth-child(6) { animation-delay: 0.5s; }
+  .logo span:nth-child(7) { animation-delay: 0.6s; } /* space */
+  .logo span:nth-child(8) { animation-delay: 0.7s; }
+  .logo span:nth-child(9) { animation-delay: 0.8s; }
+
+  
+  @keyframes logo {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+}
+
+
+    /* NAV SECTION */
+.nav{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.nav a{
+    text-decoration: none;
+    position: relative;
+    font-size: 1.2rem;
+    color:  rgba(0, 0, 0, 0.662);
+    font-weight: 500;
+    transform: 0.3s linear;
+  
+}
+.nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(109, 67, 0);
+    transition: 0.2s linear;
+}
+.nav a:hover::after{
+    width: 100%;
+}
+.nav a:hover{
+    color: rgb(109, 67, 0);
+}
+
+/* main section */
+
+.hero{
+    display: flex;
+    gap: 4rem;
+    padding: 30px 76px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+        box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.2),
+      0px 2px 4px 0px rgba(0, 0, 0, 0.1),
+      0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.role{
+    font-family: "Cinzel";
+    color: rgb(109, 67, 0);
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+.head h1{
+    font-size: 3rem;
+    display: block;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.662);
+}
+.name{
+    font-size: 3rem;
+    display: block;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.662);
+}
+.style{
+    display: inline-block;
+    width: 8ch; /* fixed width to prevent layout jump */
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    border-right: 2px solid black;
+    animation: typing-deleting 2s steps(8) infinite alternate, blink 1s step-end infinite;
+}
+@keyframes typing-deleting {
+    0% { width: 0ch; }
+    100% { width: 8ch; }
+  }
+  
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: black; }
+  }
+
+
+.bio{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.662);
+    letter-spacing: 0.1rem;
+    text-align: justify;
+}
+
+.bio span{
+    font-weight: bold;
+    color: rgb(109, 67, 0);
+}
+.bio p{
+    margin-top: 10px;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.662);
+    letter-spacing: 0.1rem;
+}
+
+ /* button sectiion */
+
+
+.btn{
+    display: flex;
+    gap: 2rem;
+    margin-top: 3.5rem;
+}
+.btn a{
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* btn 2 section */
+
+
+.btn-2{
+    
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #0c0c0c;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    transition: 0.5s ease;
+}
+.btn-2 a{
+    color: rgba(0, 0, 0, 0.662);
+}
+.btn-2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(109, 67, 0);
+    transition: 0.5s ease;
+}
+
+.btn-2:hover {
+    color: #fff;
+    transition-delay: 0.5s;
+}
+.btn-2:hover::before {
+    width: 100%;
+}
+.btn-2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: rgb(109, 67, 0);
+    transition: 0.4s ease;
+    z-index: -1;
+}
+.btn-2:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+}
+
+/* btn-1 scetion */
+
+.btn-1{
+    
+    width: 160px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.662);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.btn-1 a{
+    color: #fff;
+}
+.btn-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.662);
+}
+.btn-1:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.662);
+}
+.btn-1::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn-1::after {
+    background-color: rgb(109, 67, 0);
+}
+.btn-1:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/* About */
+
+
+.about{
+    padding: 30px 76px;
+    margin-top: 3rem;
+}
+.about-header{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.662); 
+    font-family: "Cinzel";
+    border-bottom: 2px solid rgb(109, 67, 0);
+    margin-bottom: 5rem; 
+    display: inline-block; 
+}
+.about-content{
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    
+}
+.about-img img{
+    width: 100%;
+    max-width: 400px;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.1),
+    0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+}
+.about-text{
+    flex: 1;
+}
+.about-text p{
+    text-align: justify;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.662);
+    letter-spacing: 0.1rem;
+    padding: 0;
+}
+
+/* Stack */
+
+.stack{
+    padding: 30px 76px;
+    margin-top: 3rem;
+    overflow: hidden;
+}
+.stack-header{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.662); 
+    font-family: "Cinzel";
+    border-bottom: 2px solid rgb(109, 67, 0);
+    margin-top: 5rem; 
+    display: inline-block; 
+}
+.stack-content{
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    animation: scroll 5s linear infinite;
+    margin-top: 5rem;
+    width: max-content;
+}
+.stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3rem;
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    margin-right: 2rem;
+    padding: 1rem;
+    background: transparent;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+} 
+.stack-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+.stack-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+  
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-50%);
+    }
+}
+
+.stack-item p{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    width: auto;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.662);
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    padding: 30px 76px;
+    margin-top: -6rem;
+}
+.portfolio-header{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.662); 
+    font-family: "Cinzel";
+    border-bottom: 2px solid rgb(109, 67, 0);
+    margin-top: 5rem; 
+    display: inline-block; 
+}
+.portfolio-text{
+    font-size: 3rem;
+    display: flex;
+    font-family: "Cinzel";
+    letter-spacing: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.662);
+    text-align: center;
+    animation: pulse 2s infinite ease-in-out;
+    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.662);
+    margin: 5rem 0;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+/* RESPONSIVENESS */
+
+
+
+
+@media (max-width: 768px) {
+
+    .head h1, .name, .style{
+        font-size: 2rem;
+    }
+    .bio{
+        width: 400px;
+        font-size: 0.7rem;
+        text-align: left;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 3rem;
+        padding: 30px 40px;
+    }
+    
+      .img img {
+        width: 100%;
+        height: auto;
+    }
+    
+      .head h1,
+      .name {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+      .role {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+      .bio {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+    
+      .btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    
+      .btn-1,
+      .btn-2 {
+        width: 140px;
+        height: 50px;
+        font-size: 14px;
+    }
+    
+      .style {
+        width: 8ch;
+        animation: typing-deleting 2s steps(8) infinite alternate, blink 1s step-end infinite;
+    }
+    .about {
+        padding: 30px 76px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .about-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .about-text p {
+        max-width: 700px;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.6;
+        letter-spacing: 0.05rem;
+        text-align: justify;
+    }
+    
+    
+
+    
+}
+
+
+@media (max-width: 425px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 20px;
+    }
+  
+    .logo {
+      margin-bottom: 15px;
+    }
+  
+    .logo span {
+      font-size: 1.5rem;
+    }
+  
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+  
+    .nav a {
+      font-size: 1rem;
+      padding-left: 5px;
+    }
+
+    .hero {
+        padding: 30px 20px;
+        gap: 2rem;
+    }
+    
+    .head h1,
+    .name {
+        font-size: 2rem;
+    }
+    
+    .style {
+        width: 8ch; /* was 6ch */
+        animation: typing-deleting 2s steps(8) infinite alternate, blink 1s step-end infinite;
+    }
+    
+    .bio {
+        font-size: 0.9rem;
+    }
+    
+    .btn-1,
+    .btn-2 {
+        width: 130px;
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .about-header {
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+    }
+    .portfolio-text{
+        font-size: 2rem;
+        letter-spacing: 1rem;
+    }
+
+
+}
+    
+    
+
+  
+  @media (max-width: 360px) {
+    .logo span {
+      font-size: 1.3rem;
+    }
+  
+    .nav a {
+      font-size: 0.95rem;
+    }
+    .head h1,
+    .name {
+      font-size: 1.8rem;
+    }
+  
+    .head h1,
+    .name {
+      font-size: 1.8rem;
+    }
+  
+    .style {
+      width: 8ch; /* Ensure full name displays */
+      animation: typing-deleting 2s steps(8) infinite alternate, blink 1s step-end infinite;
+    }
+  
+    .bio {
+      font-size: 0.6rem;
+      width: 300px;
+    }
+  
+    .btn-1,
+    .btn-2 {
+      width: 120px;
+      height: 42px;
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 320px) {
+    .about {
+        padding: 15px;
+    }
+
+    .about-header {
+        font-size: 1.1rem;
+    }
+
+    .about-text p {
+        font-size: 0.85rem;
+    }
+    .portfolio-text{
+        font-size: 1.5rem;
+        letter-spacing: 0.8rem;
+    }
+    .portfolio{
+        padding-left: 52px;
+    }
+}
+  

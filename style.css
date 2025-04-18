@@ -487,6 +487,107 @@ header{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  /* Adjust the layout for tablets and smaller desktops */
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .about-header {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* More specific styles for small screens */
+  .about-header {
+    font-size: 1.1rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 890px) {
     .about {
       padding: 30px 76px;

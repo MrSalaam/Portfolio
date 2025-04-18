@@ -486,7 +486,7 @@ header{
 /* RESPONSIVENESS */
 
 
-@media (max-width: 859px) {
+@media (max-width: 950px) {
     .about {
       padding: 30px 76px;
     }
